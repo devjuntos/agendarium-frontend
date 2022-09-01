@@ -5,8 +5,8 @@ import HelloWorld from "../HelloWorld.vue";
 
 describe("HelloWorld", () => {
   it("renders properly", () => {
-    const msg = "Hello Vitest";
-    const wrapper = mount(HelloWorld, { props: { msg } });
-    expect(wrapper.text()).toContain(msg);
+    const expectedMsg = "Hello Vitest";
+    const wrapper = mount(HelloWorld, { props: { msg: expectedMsg } });
+    expect(wrapper.text()).toContain(`${expectedMsg} 10`);
   });
 });
