@@ -1,0 +1,13 @@
+on: push
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v3
+      - run: npm install
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run test:unit
