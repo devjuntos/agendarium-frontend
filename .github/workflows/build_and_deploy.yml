@@ -7,7 +7,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v3
-      - run: npm install
-      - run: npm run lint
-      - run: npm run build
-      - run: npm run test:unit
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Checar lint
+        run: npm run lint
+
+      - name: Compilar
+        run: npm run build
+
+      - name: Testes Unitários
+        run: npm run test:unit
