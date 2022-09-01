@@ -7,6 +7,6 @@ describe("HelloWorld", () => {
   it("renders properly", () => {
     const expectedMsg = "Hello Vitest";
     const wrapper = mount(HelloWorld, { props: { msg: expectedMsg } });
-    expect(wrapper.text()).toContain(`${expectedMsg} 10`);
+    expect(wrapper.text()).toContain(expectedMsg);
   });
 });
